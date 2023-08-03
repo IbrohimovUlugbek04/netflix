@@ -1,7 +1,7 @@
 var countries = ["English", "Русский", "O'zbek"];
 
-var siteContaoner = document.createElement("div")
-siteContaoner.classList.add("container");
+var siteContainer = document.createElement("div")
+siteContainer.classList.add("container");
 // site header elament start 
 var siteHeader = document.querySelector(".site-header");
 var elHeaderContainer = document.querySelector(".container")
@@ -19,6 +19,14 @@ var sectinHero = document.createElement("section");
 sectinHero.classList.add("hero");
 var heroWrapper = document.createElement("div");
 heroWrapper.classList.add("hero__wrapper");
+
+var heading = document.createElement("h1")
+heading.classList.add("visually-hidden")
+heading.textContent = ("Netflix");
+var heroHeading = document.createElement("h2");
+heroHeading.classList.add("hero__heading")
+heroHeading.textContent = ("Netflix kinolar");
+
 var heroList = document.createElement("ul");
 heroList.classList.add("hero__list");
 // site main elament finish 
@@ -56,8 +64,10 @@ siteHeaderWrapper.append(headerLogoLink, headerForm, headerLink);
 // site header finish 
 
 // site main start
-sectinHero.append(siteContaoner);
-siteContaoner.append(heroWrapper);
+sectinHero.append(siteContainer);
+siteContainer.append(heroWrapper);
+heroWrapper.append(heading);
+heroWrapper.append(heroHeading);
 heroWrapper.append(heroList);
 for (const movie of kinolar) {
   var movieItem = document.createElement("li");

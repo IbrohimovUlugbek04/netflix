@@ -29,6 +29,16 @@ body {
   padding: 0 20px;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* site header style start  */
 
 .site-header {
@@ -93,6 +103,13 @@ background-color: #222;
 
 .hero__wrapper {
   padding-top: 20px;
+}
+
+.hero__heading {
+text-align: center;
+font-weight: 400;
+font-size: 40px;
+color: #fff;
 }
 
 .hero__list {
